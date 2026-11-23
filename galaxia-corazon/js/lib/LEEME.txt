@@ -1,0 +1,4 @@
+OPCIONAL - para que funcione SIN internet:
+1) Con internet, descarga este archivo y guárdalo aquí con el nombre three.min.js:
+   https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js
+2) Listo: si el CDN no responde, el programa usa automáticamente esta copia.

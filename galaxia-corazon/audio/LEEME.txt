@@ -1,0 +1,2 @@
+Aquí está la canción del programa: musica.mp3
+Para cambiarla, reemplaza este archivo o cambia el nombre en js/config.js -> musica.archivo.

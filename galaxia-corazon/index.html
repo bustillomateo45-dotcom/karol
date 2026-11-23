@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <title>Te amo · Galaxia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="scene"></canvas>
+
+  <div id="cargando"><span>Creando la galaxia…</span></div>
+
+  <p id="ayuda">
+    Arrastra para girar · Rueda o pellizco para acercar · Clic derecho o dos dedos para moverte
+  </p>
+
+  <div id="zoom-botones">
+    <button id="centrar" aria-label="Volver al centro">⌖</button>
+  </div>
+
+  <button id="btn-musica" aria-label="Pausar música" aria-pressed="false">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18V5l11-2v13"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="17.5" cy="16" r="2.5"/>
+    </svg>
+  </button>
+
+  <!-- Solo aparece si el navegador bloquea el inicio automático del sonido -->
+  <button id="entrada" class="oculto" type="button">
+    <span class="ent-corazon">♥</span>
+    <span class="ent-texto">Toca para entrar</span>
+  </button>
+
+  <button id="btn-carta" aria-label="Abrir carta">
+    <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M3 10l9-6 9 6v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V10z"/>
+      <path d="M3 10l9 6 9-6"/>
+    </svg>
+  </button>
+
+  <div id="modal" class="oculto" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div id="tarjeta">
+      <button id="cerrar" aria-label="Cerrar">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 5l14 14M19 5L5 19"/></svg>
+      </button>
+      <h2 id="modal-titulo"></h2>
+      <div id="modal-texto"></div>
+    </div>
+  </div>
+
+  <!-- three.js (UMD, no necesita módulos) -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <!-- Respaldo sin internet: ver js/lib/LEEME.txt -->
+  <script>window.THREE || document.write('<script src="js/lib/three.min.js"><\/script>');</script>
+  <script src="js/config.js"></script>
+  <script src="js/imagenes_data.js"></script>
+  <script src="js/controles.js"></script>
+  <script src="js/galaxia.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/musica.js"></script>
+</body>
+</html>
